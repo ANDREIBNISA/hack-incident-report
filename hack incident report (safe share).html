@@ -72,6 +72,8 @@ ul.check li.done::before { content: "✓"; color: var(--green); }
 ul.check li.todo::before { content: "○"; color: var(--amber); }
 ul.check li.hit::before { content: "!"; color: var(--red); left: 6px; }
 .note { color: var(--muted); font-size: 13px; }
+.bar { height: 12px; background: var(--line); border-radius: 999px; overflow: hidden; margin: 8px 0 14px; }
+.bar span { display: block; height: 100%; background: var(--green); border-radius: 999px; }
 @media print { .card, .stat, .tablewrap { break-inside: avoid; } }
 </style>
 <main>
@@ -91,6 +93,7 @@ ul.check li.hit::before { content: "!"; color: var(--red); left: 6px; }
     <div class="stat"><b>8</b><span>browser profiles exposed</span></div>
     <div class="stat"><b>~164</b><span>saved passwords stolen</span></div>
     <div class="stat"><b>None</b><span>malware remaining</span></div>
+    <div class="stat"><b>89%+</b><span>accounts fully recovered</span></div>
   </div>
 </div>
 
@@ -249,6 +252,19 @@ ul.check li.hit::before { content: "!"; color: var(--red); left: 6px; }
   <li class="done">Gmail password changed</li>
   <li class="done">Authenticator (2FA) reset</li>
 </ul>
+
+<h3>Account recovery progress</h3>
+<div class="card">
+  <p><b>At least 89% of affected accounts are fully recovered.</b></p>
+  <div class="bar" role="img" aria-label="89 percent recovered"><span style="width:89%"></span></div>
+  <ul class="check">
+    <li class="done">Epic Games</li>
+    <li class="done">Steam</li>
+    <li class="done">Microsoft account</li>
+    <li class="done">Minecraft account (linked through the Microsoft account)</li>
+  </ul>
+  <p class="note" style="margin-top:10px">Figure reported by the account owner, not independently verified. Accounts still open are listed below.</p>
+</div>
 
 <h2>7. Still to do</h2>
 <ul class="check card">
